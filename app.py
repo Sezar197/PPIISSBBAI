@@ -28,7 +28,7 @@ P = st.number_input("Load", value=1000000.0)
 if st.button("Predict"):
     X = np.array([[E, nu, w, d, P]])
     # Analytical value
-    theo = timoshenko_deflection(E, nu, b, h, P)
+    theo = timoshenko_deflection(E, nu, w, d, P)
 
     # Error %
     error = abs((xgb_pred - theo) / theo) * 100
