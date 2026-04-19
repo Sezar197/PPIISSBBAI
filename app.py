@@ -6,7 +6,7 @@ import joblib
 #rf = joblib.load("rf_model.pkl")
 xgb = joblib.load("xgb_model.pkl")
 scaler = joblib.load("scaler.pkl")
-ann = load_model("ann_model.h5")
+#ann = load_model("ann_model.h5")
 
 st.title("Beam Deflection Predictor")
 
@@ -23,8 +23,8 @@ if st.button("Predict"):
     xgb_pred = xgb.predict(X)[0]
 
     X_scaled = scaler.transform(X)
-    ann_pred = ann.predict(X_scaled)[0][0]
+    #ann_pred = ann.predict(X_scaled)[0][0]
 
     st.write("### Predictions")
     st.write(f"XGBoost: {xgb_pred}")
-    st.write(f"ANN: {ann_pred}")
+    #st.write(f"ANN: {ann_pred}")
