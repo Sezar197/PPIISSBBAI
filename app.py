@@ -30,11 +30,11 @@ if st.button("Predict"):
     # Analytical value
     theo = timoshenko_deflection(E, nu, w, d, P)
 
-    # Error %
-    error = abs((xgb_pred - theo) / theo) * 100
+
     #rf_pred = rf.predict(X)[0]
     xgb_pred = xgb.predict(X)[0]
-
+    # Error %
+    error = abs((xgb_pred - theo) / theo) * 100
     X_scaled = scaler.transform(X)
     #ann_pred = ann.predict(X_scaled)[0][0]
 
