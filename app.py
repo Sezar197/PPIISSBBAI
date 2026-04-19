@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import joblib
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 
 rf = joblib.load("rf_model.pkl")
 xgb = joblib.load("xgb_model.pkl")
